@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;700&display=swap');
+
+/* styles.css */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #1c1c1c;
+  margin: 0;
+  padding: 0;
+  /* Remove overflow: hidden to allow scrolling */
+}
+
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure it stays behind the container */
+  background: linear-gradient(45deg, #000000, #4e3b36, #221c1a, #8f4f51);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  overflow: hidden; /* Ensure content stays within the container */
+}
+
+h1 {
+  font-family: 'Covered By Your Grace', cursive;
+  font-size: 3em;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.input {
+  font-family: 'Clash Display', sans-serif;
+  width: 100%; /* Ensure the input stays within the container */
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #201b1b;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #361f16;
+  transform: translateY(-2px);
+}
+
+.button:disabled {
+  background-color: #ccc;
+}
+
+.error {
+  color: red;
+  margin-bottom: 20px;
+}
+
+.palettes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.palette {
+  width: 45%;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.palette-name {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.colors {
+  display: flex;
+  gap: 5px;
+}
+
+.color-box {
+  flex: 1;
+  height: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.color-box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer-space {
+  height: 100px; /* Adjust the height as needed */
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .palette {
+    width: 100%;
+  }
+
+  .input {
+    width: calc(100% - 20px);
+  }
+
+  .button {
+    width: 100%;
+    padding: 10px;
+  }
+}
