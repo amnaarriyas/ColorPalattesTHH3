@@ -9,6 +9,7 @@ This project is a **React-based web application** that takes any text input, ana
 - Users can click **"Generate" multiple times** to receive **new palettes** for the same text.
 - Fully dynamic—**no predefined palettes**, ensuring unique results for each query.
 - Simple and **minimalistic UI**, displaying color palettes in real-time.
+- **Click on a color** to **copy its hex code** to the clipboard for easy use.
 
 ## **🛠️ Technologies Used**
 - **React.js** for the front-end
@@ -24,6 +25,7 @@ This project is a **React-based web application** that takes any text input, ana
 3. Based on the sentiment (e.g., **happy, sad, energetic, calm**), the API returns **4 unique palettes**.
 4. The app **extracts the palettes** and displays them as colored boxes.
 5. Clicking **"Generate" again** fetches new palettes for the same text, providing variety.
+6. Users can **click on a color** to **copy its hex code** to the clipboard.
 
 ---
 
@@ -44,7 +46,7 @@ This project is a **React-based web application** that takes any text input, ana
 ## **🚀 Setup & Installation**
 ### **1️⃣ Clone the Repository**
 ```sh
-git clone https://github.com/your-username/palette-generator.git
+git clone https://github.com/amnaarriyas/ColorPalattesTHH3
 cd palette-generator
 ```
 
@@ -67,6 +69,7 @@ The app will be available at **http://localhost:3000/**.
 3. **Wait a few seconds** while the API processes the sentiment.
 4. View **4 unique color palettes** based on the detected sentiment.
 5. Click **"Generate Palette" again** to see **new variations** for the same text.
+6. **Click on a color box** to copy its hex code to the clipboard.
 
 ---
 
@@ -98,6 +101,7 @@ The app will be available at **http://localhost:3000/**.
 - Modify the **UI** in `styles.css`.
 - Change **palette display logic** in `PaletteGenerator.js`.
 - Improve **error handling** for API failures.
+- Enhance the **copy-to-clipboard feature** for better user experience.
 
 ---
 

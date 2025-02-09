@@ -63,16 +63,18 @@ const PaletteGenerator = () => {
       <div className="animated-background"></div>
       <div className="container">
         <h1>Get your Colors!</h1>
-        <input
-          type="text"
-          placeholder="Enter your text to generate palettes"
-          value={word}
-          onChange={(e) => setWord(e.target.value)}
-          className="input"
-        />
-        <button onClick={generatePalette} disabled={loading} className="button">
-          {loading ? "Generating..." : "Generate"}
-        </button>
+        <div className="input-container">
+          <input
+            type="text"
+            placeholder="Enter your text to generate palettes"
+            value={word}
+            onChange={(e) => setWord(e.target.value)}
+            className="input"
+          />
+          <button onClick={generatePalette} disabled={loading} className="button">
+            {loading ? "Generating..." : "Generate"}
+          </button>
+        </div>
 
         {error && <p className="error">{error}</p>}
 
